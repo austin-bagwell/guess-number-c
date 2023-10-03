@@ -3,35 +3,41 @@
 #include <stdlib.h>
 
 
-
+int getIntInput() {
+  int myNum;
+  printf("==> ");
+  scanf("%d", &myNum);
+//   typecheck myNum, handle any errs
+  return myNum;
+}
 
 int main() {
   // Initialization, should only be called once.
   srand(time(NULL)); 
-  // Returns a pseudo-random integer between 0 and RAND_MAX.
+  // Returns a pseudo-random integer between 0 and RAND_MAX, modulo 100 to keep it small.
   int r = rand() % 100;      
-  int myNum;
   int min = r - 10;
   int max = r + 10;
 
-  printf("Hello World!\n");
+  char greeting[] = "Hello World!";
+  printf("%s\n", greeting);
 
   printf("It's the number guessing game!\n");
-  printf("You know the drill... guess the number: \n");
   printf("The random number generated is between %d and %d: \n", min, max);
+  printf("You know the drill... guess the number: \n");
   
-  scanf("%d", &myNum);
-  
+  int myNum = getIntInput();
   while (myNum != r)
   {
   printf("You entered: %d\n", myNum);
   printf("The random number generated was: %d\n", r);
   printf("Try again...\n");
-  scanf("%d", &myNum);
+    myNum = getIntInput();
   }
   
   printf("Congratulations!\n");
-  printf("By guessing the correct number, you saved the world. Now fuck off.\n");
+  printf("You guessed the correct number and saved the world. Now fuck off.\n");
 
   return 0;
 };
+
