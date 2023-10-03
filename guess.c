@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-// https://stackoverflow.com/questions/822323/how-to-generate-a-random-int-in-c
+
 int getIntInput() {
   int myNum;
   printf("==> ");
@@ -13,6 +13,7 @@ int getIntInput() {
 }
 
 int main() {
+  // https://stackoverflow.com/questions/822323/how-to-generate-a-random-int-in-c
   // Initialization, should only be called once.
   srand(time(NULL)); 
   // Returns a pseudo-random integer between 0 and RAND_MAX, modulo 100 to keep it small.
