@@ -2,12 +2,13 @@
 #include <time.h>
 #include <stdlib.h>
 
-
+// https://stackoverflow.com/questions/822323/how-to-generate-a-random-int-in-c
 int getIntInput() {
   int myNum;
   printf("==> ");
   scanf("%d", &myNum);
-//   typecheck myNum, handle any errs
+  // TODO
+  // typecheck myNum, handle any errs
   return myNum;
 }
 
