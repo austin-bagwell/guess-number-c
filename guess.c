@@ -32,9 +32,8 @@ int main() {
   while (myNum != r)
   {
   printf("You entered: %d\n", myNum);
-  printf("The random number generated was: %d\n", r);
   printf("Try again...\n");
-    myNum = getIntInput();
+  myNum = getIntInput();
   }
   
   printf("Congratulations!\n");
